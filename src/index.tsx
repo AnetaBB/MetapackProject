@@ -1,7 +1,8 @@
-import * as ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Home from "./Home";
-import { store } from "./store";
+import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import Home from './Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { store } from './store';
 
 const App = () => {
   return (
@@ -11,4 +12,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
