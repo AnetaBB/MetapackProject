@@ -6,7 +6,6 @@ import { Button } from './components/Button';
 import { actionCreators } from './store';
 import { RootState } from './store/reducers';
 import './styles/home.css';
-
 const Home = () => {
   const state = useSelector((state: RootState) => state.bank);
   const dispatch = useDispatch();
