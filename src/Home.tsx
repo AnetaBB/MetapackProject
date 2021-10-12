@@ -1,11 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
-import { Logo } from "./assets/logo";
-import { Title } from "./components";
-import { Button } from "./components/Button";
-import { actionCreators } from "./store";
-import { RootState } from "./store/reducers";
-import "./styles/home.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Logo } from './assets/logo';
+import { Title } from './components';
+import { Button } from './components/Button';
+import { actionCreators } from './store';
+import { RootState } from './store/reducers';
+import './styles/home.css';
 
 const Home = () => {
   const state = useSelector((state: RootState) => state.bank);
@@ -17,9 +17,9 @@ const Home = () => {
   );
 
   return (
-    <div className="App">
+    <div className='App'>
       <Logo height={200} width={200} />
-      <div className="counter-container">
+      <div className='counter-container'>
         <Button onClick={() => decrement(1)}> - </Button>
         <Title>{state}</Title>
         <Button onClick={() => increment(1)}> + </Button>
