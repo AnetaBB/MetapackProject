@@ -1,8 +1,10 @@
 import React from 'react';
+import UseEffectAPI from './components/UsersListPage/UseEffectAPI';
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function GithubUsers() {
   return (
     <div>
-      <h1>Keep testing</h1>
+      <UseEffectAPI />
     </div>
   );
 }
