@@ -20,35 +20,40 @@ const UseEffectAPI = () => {
   }, []);
   return (
     <div>
-      <h1>
-        <FaGithub />
-        Github Users
-      </h1>
+      <div class='appName'>
+        <h1>
+          <FaGithub />
+          Github Users
+        </h1>
+      </div>
       <div className='container-fluid mt-5'>
-        <div className='row text-center'>
+        <div className='row'>
           {users.map((curElem) => {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { avatar_url, id, login, repos_url } = curElem;
             return (
-              <div className='col-10 col md-4 mt-5'>
-                <div class='card p-2'>
-                  <div class='d-flex align-items-center'>
-                    <div class='image'>
-                      <img
-                        src={avatar_url}
-                        className='rounded'
-                        width='155'
-                      ></img>{' '}
-                      {/* img src={avatar_url} is for Avatar injection*/}
-                      <div class='ml-3 w-100'>
+              <div className='col col-4'>
+                <div class='padding'>
+                  <div class='card p-3'>
+                    <div class='d-flex flex-row mb-3'>
+                      <div class='avatar'>
+                        <img
+                          src={avatar_url}
+                          className='rounded'
+                          width='76'
+                          height='76'
+                        ></img>{' '}
+                      </div>
+                      <div class='d-flex flex-column ml-2'>
                         <h4 className='mb-0 mt-0 textLeft'>@{curElem.login}</h4>{' '}
                         {/*h4 is for username/login injection*/}
                         <div className='d-flex flex-column'>
-                          <span className='number1'>ID:#{id}</span>{' '}
-                          {/*here will be id injection*/}
-                        </div>
-                        <div className='d-flex flex-column'>
                           <span className='number2'>Team</span>{' '}
                           {/*here will be budge inserted*/}
+                        </div>
+                        <div className='d-flex flex-column'>
+                          <span className='number1'>ID:#{id}</span>{' '}
+                          {/*here will be id injection*/}
                         </div>
                         <div className='d-flex flex-column'>
                           <span className='number3'>
@@ -56,11 +61,15 @@ const UseEffectAPI = () => {
                             GitHub page
                           </span>{' '}
                           {/*here will be button to users profile repos_url*/}
-                          <div className='d-flex flex-column'>
-                            <span className='number2'>Details</span>{' '}
-                            {/*here will be details link*/}
-                          </div>
                         </div>
+                      </div>
+                    </div>
+                    <div className='d-flex flex-column'>
+                      <div class='details'>
+                        <button type='button' class='btn btn-link'>
+                          Details
+                        </button>{' '}
+                        {/*here will be details link*/}
                       </div>
                     </div>
                   </div>
