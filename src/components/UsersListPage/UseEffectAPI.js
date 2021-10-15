@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import React, { useState, useEffect } from 'react';
 import UserProfile from '../UserDetailPage/UserProfile';
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const UseEffectAPI = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [users, setUsers] = useState([]);
@@ -100,7 +101,10 @@ const UseEffectAPI = () => {
           </div>
         </div>
       ) : (
-        <UserProfile />
+        <div>
+          Here will be nested content of <UserProfile /> if it would work
+          correctly
+        </div>
       )}
     </div>
   );
