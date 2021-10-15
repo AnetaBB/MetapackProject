@@ -2,6 +2,7 @@ import './usersListPage.css';
 import { FaGithub } from 'react-icons/fa';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState, useEffect } from 'react';
+import UserProfile from '../UserDetailPage/UserProfile';
 
 const UseEffectAPI = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -99,7 +100,7 @@ const UseEffectAPI = () => {
           </div>
         </div>
       ) : (
-        <div>testowy tekst</div>
+        <UserProfile />
       )}
     </div>
   );
